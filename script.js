@@ -15,5 +15,5 @@ $(() => {
             .then(response => {
                 //renderMemes(response.Search);
                 console.log(response);
-            })
+            });
 });
