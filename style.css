@@ -1,3 +1,4 @@
+
 .search-bar {
   /* float: center; */
   display: block;
@@ -51,3 +52,9 @@ body {
   color: black;
   background-color: khaki;
 }
+.meme-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
