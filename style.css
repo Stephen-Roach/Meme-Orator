@@ -1,51 +1,52 @@
+.search-bar {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17ßpx;
+  margin: auto;
+  width: 100%;
+}
+
+body {
+  background-color: maroon;
+  text-align: center;
+  border-color: darkgoldenrod;
+}
+
+.box {
+  border-color: goldenrod;
+  border-width: 15px;
+  border-style: groove;
+  width: 1000px;
+  padding: 500px;
+  margin-left: 200px;
+  background-image: url("https://images.app.goo.gl/vZQNK6SLaA4qxyZN9");
+}
+.header {
+  padding: 60px;
+  text-align: center;
+  background: black;
+  color: goldenrod;
+  font-size: 20px;
+  font-family: cursive;
+}
+
+.fa {
+  padding: 30px;
+  font-size: 30px;
+  width: 50px;
+  text-align: left;
+  text-decoration: none;
+  border-radius: 50%;
+  color: black;
+  background-color: khaki;
+}
+
 .meme-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.search-bar {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17ßpx;
-    margin: auto;
-    width: 100%;
-  }
-  
-  body {
-    background-color: maroon;
-    text-align: center;
-    border-color: darkgoldenrod;
-  }
-  .box {
-    border-color: goldenrod;
-    border-width: 15px;
-    border-style: groove;
-    width: 1000px;
-    padding: 500px;
-    margin-left: 200px;
-    background-image: url("https://images.app.goo.gl/vZQNK6SLaA4qxyZN9");
-  }
-
-  .header {
-    padding: 60px;
-    text-align: center;
-    background: black;
-    color: goldenrod;
-    font-size: 20px;
-    font-family: cursive;
-  }
-  
-  .fa {
-    padding: 30px;
-    font-size: 30px;
-    width: 50px;
-    text-align: left;
-    text-decoration: none;
-    border-radius: 50%;
-    color: black;
-    background-color: khaki;
-  }
