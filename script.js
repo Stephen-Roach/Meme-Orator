@@ -17,8 +17,6 @@ $(() => {
             .then(response => {
                 renderMemes(response.data.memes);
             });
-
-
             
     function renderMemes(memeArray){
         memeArray.map((memeItem) => {
