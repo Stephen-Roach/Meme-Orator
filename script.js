@@ -1,5 +1,6 @@
 $(() => {
-
+    // import "external/jquery/jquery.js"
+    // import "jquery-ui.js"
     // PLACEHOLDER FOR SEARCH FUNCTIONALITY
 
     // $(".search-bar").click(function(e){
@@ -31,4 +32,5 @@ $(() => {
             `);
         });
     }
+    $( "#date" ).datepicker();
 });
