@@ -96,12 +96,17 @@ body {
   padding: 500px;
   margin-left: 200px;
   background-image: url("https://images.app.goo.gl/vZQNK6SLaA4qxyZN9");
+  overflow: auto;
+  resize: both;
+  height: auto;
 }
 
 .box img {
-    width: auto;
+    width: 800px;
     height: auto;
+      
 }
+
 
 .header {
   padding: 60px;
@@ -134,3 +139,34 @@ body {
   font-family: cursive;
 }
 
+#search-size{
+  background-color: goldenrod;
+  color: black;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  font-size: 50px;
+  width: 300px;
+}
+
+#search-size:hover{
+  box-shadow: 0 0 60px black;
+}
+
+#search-btn{
+  background-color: black;
+  color: goldenrod;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  
+}
+
+#search-btn:hover{
+  box-shadow: 0 0 60px goldenrod;
+}
+
+#search-btn img{
+  width: 60px;
+  height: 35px;
+}
