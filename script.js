@@ -2,7 +2,7 @@ $(() => {
 
     document.cookie = "SameSite=None; Secure"
 
-    $("#search-size").click(function(e){
+    $("#search-btn").click(function(e){
         e.preventDefault();
         let searchString = $("#search-size").val();
         fetch(`http://api.giphy.com/v1/gifs/search?q=${searchString}&api_key=RJpUMPEri2bZmuX4lkjaIX9NeuYWQjfA&`)
@@ -23,7 +23,7 @@ $(() => {
         let searchString = $("#search-size").val();
         searchString.toLowerCase();
         memeArray.map((memeItem) => {
-            if(memeItem.name.toLowerCase().includes(searchString) ){
+            if(memeItem.name.toLowerCase().includes(searchString)){
                 $(".meme-container").append(`
                     <div class="meme">
                     <div class="card" style="width: 18rem;">
