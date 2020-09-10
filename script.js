@@ -23,7 +23,7 @@ $(() => {
         let searchString = $("#search-size").val();
         searchString.toLowerCase();
         memeArray.map((memeItem) => {
-            if(memeItem.name.toLowerCase() === searchString){
+            if(memeItem.name.toLowerCase().includes(searchString) ){
                 $(".meme-container").append(`
                     <div class="meme">
                     <div class="card" style="width: 18rem;">
