@@ -80,6 +80,7 @@ ul li:nth-child(3):hover {
     width: 50%;
     margin: auto;
     padding-top: 50px;
+    padding-bottom: 25px;
 }
 
 body {
