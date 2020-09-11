@@ -1,21 +1,17 @@
 $(() => {
 
-    document.cookie = "SameSite=None; Secure"
-
     $("#search-btn").click(function(e){
         e.preventDefault();
         let searchString = $("#search-size").val();
-        fetch(`http://api.giphy.com/v1/gifs/search?q=${searchString}&api_key=RJpUMPEri2bZmuX4lkjaIX9NeuYWQjfA&`)
-            .then(response => response.json())
-            .then(response => {
-                renderGifs(response.data);
-                console.log(response.data);
-            });
         fetch("https://api.imgflip.com/get_memes")
             .then(response => response.json())
             .then(response => {
                 renderMemes(response.data.memes);
-                console.log(response.data.memes);
+            });
+        fetch(`http://api.giphy.com/v1/gifs/search?q=${searchString}&api_key=RJpUMPEri2bZmuX4lkjaIX9NeuYWQjfA&`)
+            .then(response => response.json())
+            .then(response => {
+                renderGifs(response.data);
             });
     });
             
@@ -34,12 +30,13 @@ $(() => {
             }
         });
     }
+    
     function renderGifs(gifArray){
         gifArray.map((gifItem) => {
             $(".meme-container").append(`
                 <div class="meme">
                 <div class="card" style="width: 18rem;">
-                <a href="#" onclick="selectMeme('${gifItem.embed_url}')"<img id="meme-image" class="card-img-top" src="${gifItem.embed_url}" alt="Card image cap"></a>
+                <a href="#" onclick="selectMeme('${gifItem.images.original.url}')"><img id="meme-image" class="card-img-top" src="${gifItem.images.original.url}" alt="Card image cap"></a>
                 </div>
                 </div>
             `);
