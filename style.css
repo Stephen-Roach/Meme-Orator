@@ -93,16 +93,32 @@ body {
   border-color: goldenrod;
   border-width: 15px;
   border-style: groove;
-  max-width: 75%;
+  max-width: 85%;
   padding: 50px;
   margin: auto;
   overflow: auto;
   max-height: 75%;
+  display: flex;
+  align-items: center;
+  
 }
 
-.box img {
-  width: 400px;
-  height: auto;
+.box-imgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  bottom: 20px;         
+  width: auto;
+  align-items: center; 
+}
+
+
+
+.text-submit{
+  background-color: khaki;
+  border-radius: 10px;
+  outline: none;
+  border: none;
 }
 
 .header {
@@ -169,6 +185,7 @@ body {
 #top-text {
   background-color: lightyellow;
   font-size: 25px;
+  
 }
 #bottom-text {
   background-color: lightyellow;
