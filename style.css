@@ -77,9 +77,10 @@ ul li:nth-child(3):hover {
   } */
 
 .input-group {
-    width: 50%;
-    margin: auto;
-    padding-top: 50px;
+  width: 50%;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 40px;
 }
 
 body {
@@ -92,21 +93,18 @@ body {
   border-color: goldenrod;
   border-width: 15px;
   border-style: groove;
-  width: 1000px;
-  padding: 500px;
-  margin-left: 200px;
-  background-image: url("https://images.app.goo.gl/vZQNK6SLaA4qxyZN9");
+  max-width: 75%;
+  padding: 50px;
+  margin: auto;
   overflow: auto;
   resize: both;
-  height: auto;
+  max-height: 75%;
 }
 
 .box img {
-    width: 800px;
-    height: auto;
-      
+  width: 400px;
+  height: auto;
 }
-
 
 .header {
   padding: 60px;
@@ -139,7 +137,7 @@ body {
   font-family: cursive;
 }
 
-#search-size{
+#search-size {
   background-color: goldenrod;
   color: black;
   border-radius: 25px;
@@ -149,24 +147,23 @@ body {
   width: 300px;
 }
 
-#search-size:hover{
+#search-size:hover {
   box-shadow: 0 0 60px black;
 }
 
-#search-btn{
+#search-btn {
   background-color: black;
   color: goldenrod;
   outline: none;
   border: none;
   border-radius: 25px;
-  
 }
 
-#search-btn:hover{
+#search-btn:hover {
   box-shadow: 0 0 60px goldenrod;
 }
 
-#search-btn img{
+#search-btn img {
   width: 60px;
   height: 35px;
 }
