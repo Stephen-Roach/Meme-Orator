@@ -191,12 +191,24 @@ body {
   background-color: lightyellow;
   font-size: 25px;
 }
+.text-submit {
+  background-color: linen;
+  font-size: 15px;
+}
 #top-text:hover {
   box-shadow: 0 0 60px goldenrod;
 }
 #bottom-text:hover {
   box-shadow: 0 0 60px goldenrod;
 }
-#text-submit:hover {
+
+.text-submit:hover {
   box-shadow: 0 0 60px goldenrod;
+}
+.input-buttons {
+  display: block;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  justify-content: flex-start;
 }
