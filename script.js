@@ -48,10 +48,10 @@ $(() => {
 function selectMeme(itemURL) {
   $(".meme-container").replaceWith(`
       <div class="box">
-          <div>
+          <div class="input-image">
             <img src="${itemURL}">
           </div>
-            <div>
+            <div class="input-buttons">
               <input id="top-text" type="text" placeholder="Top Text" />
               <input id="bottom-text" type="text" placeholder="Bottom Text" />
               <button class="text-submit">Apply</button>
