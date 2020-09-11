@@ -77,12 +77,10 @@ ul li:nth-child(3):hover {
   } */
 
 .input-group {
-
   width: 50%;
   margin: auto;
   padding-top: 50px;
   padding-bottom: 40px;
-
 }
 
 body {
@@ -99,7 +97,6 @@ body {
   padding: 50px;
   margin: auto;
   overflow: auto;
-  resize: both;
   max-height: 75%;
 }
 
@@ -109,7 +106,7 @@ body {
 }
 
 .header {
-  padding: 60px;
+  padding: 10px;
   text-align: center;
   background: black;
   color: goldenrod;
@@ -168,4 +165,21 @@ body {
 #search-btn img {
   width: 60px;
   height: 35px;
+}
+#top-text {
+  background-color: lightyellow;
+  font-size: 25px;
+}
+#bottom-text {
+  background-color: lightyellow;
+  font-size: 25px;
+}
+#top-text:hover {
+  box-shadow: 0 0 60px goldenrod;
+}
+#bottom-text:hover {
+  box-shadow: 0 0 60px goldenrod;
+}
+#text-submit:hover {
+  box-shadow: 0 0 60px goldenrod;
 }
