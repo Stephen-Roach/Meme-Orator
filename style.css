@@ -200,3 +200,31 @@ body {
 #text-submit:hover {
   box-shadow: 0 0 60px goldenrod;
 }
+
+.outside-wrapper {
+  width: 550px;
+  height: 450px;
+  margin: 20px 60px;
+}
+
+.inside-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#selected-meme {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
