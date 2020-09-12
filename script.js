@@ -1,4 +1,5 @@
 $(() => {
+    
     $("#search-btn").click(function (e) {
         e.preventDefault();
         let searchString = $("#search-size").val();
@@ -16,13 +17,11 @@ $(() => {
         });
     });
 
-
-
     function renderMemes(memeArray) {
         let searchString = $("#search-size").val();
         searchString.toLowerCase();
         memeArray.map((memeItem) => {
-        if (memeItem.name.toLowerCase().includes(searchString)) {
+        if(memeItem.name.toLowerCase().includes(searchString)) {
             $(".meme-container").append(`
                         <div class="meme">
                         <div class="card" style="width: 18rem;">
@@ -52,8 +51,8 @@ $(() => {
             <div class="box">
                 <div class="box-imgs">
                     <div class="outside-wrapper">
-                        <div class="inside-wrapper">
-                            <img id="selected-meme" src="${itemURL}">
+                        <div id="capture" class="inside-wrapper">
+                            <img id="selected-meme" src="${itemURL}" crossorigin="anonymous">
                             <canvas id="canvas"></canvas>
                         </div>
                     </div>
@@ -62,33 +61,30 @@ $(() => {
                     <form class="form-inputs">
                     <input id="top-text" type="text" placeholder="Top Text" />
                     <input id="bottom-text" type="text" placeholder="Bottom Text" />
-                    <button class="text-submit" onclick="applyText()">Apply</button>
+                    <button class="text-submit" onclick="applyText('${itemURL}')">Apply</button>
+                    <button class="download-btn" onclick="downloadMeme()">Download Meme</button>
                     </form>
                     </div>
             </div>
         `);
     }
 
-    function applyText(){
+    function applyText(imageURL){
         let topText = $("#top-text").val();
         let bottomText = $("#bottom-text").val();
         let canvas = document.getElementById("canvas");
         let ctx = canvas.getContext('2d');
+        let background = new Image();
+        background.src = imageURL;
         ctx.fillStyle = "white";
         ctx.textAlign = "left";
         ctx.font = '30px Impact';
-        ctx.fillText(topText, 20, 25);
-        ctx.fillText(bottomText, 20, 150);
+        ctx.fillText(topText, 25, 30);
+        ctx.fillText(bottomText, 25, 145);
     }
-    // $(".text-submit").click(function (e) {
-    //     e.preventDefault();
-    //     let topText = $("#top-text").val();
-    //     let bottomText = $("#bottom-text").val();
-    //     let canvas = document.getElementById("canvas");
-    //     let ctx = canvas.getContext('2d');
-    //     let img = $("#selected-meme");
-    //     ctx.drawImage(img, 10, 10);
-    //     ctx.fillStyle = "black";
-    //     ctx.font = 'bold 20px Arial';
-    //     ctx.fillText("hello", 10, 100);
-    // });
+
+    function downloadMeme(){
+        window.html2canvas(document.getElementById("capture")).then(canvas => {
+            document.body.appendChild(canvas)
+        });
+    }

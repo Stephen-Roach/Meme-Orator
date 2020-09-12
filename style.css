@@ -112,9 +112,14 @@ body {
   align-items: center; 
 }
 
-
-
 .text-submit{
+  background-color: khaki;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+.download-btn {
   background-color: khaki;
   border-radius: 10px;
   outline: none;
