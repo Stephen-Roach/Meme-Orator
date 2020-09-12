@@ -62,7 +62,7 @@ $(() => {
                     <input id="top-text" type="text" placeholder="Top Text" />
                     <input id="bottom-text" type="text" placeholder="Bottom Text" />
                     <button class="text-submit" onclick="applyText('${itemURL}')">Apply</button>
-                    <button class="download-btn" onclick="downloadMeme()">Download Meme</button>
+                    <button id="download" class="download-btn" onclick="downloadMeme()">Download Meme</button>
                     </form>
                     </div>
             </div>
@@ -86,7 +86,10 @@ $(() => {
     function downloadMeme(){
         html2canvas(document.getElementById("capture"), {
             onrendered: function(canvas){
-                
+                canvas.className = "canvas";
+                document.getElementById("capture").appendChild(canvas);
+                let img = canvas.toDataURL("image/png");
+                document.getElementById("download").href = img;
             }
         });
     }
