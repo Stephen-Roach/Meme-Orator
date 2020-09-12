@@ -249,3 +249,9 @@ body {
   align-content: flex-end;
   justify-content: flex-start;
 }
+
+#colorSelector{
+  background-color: lightyellow;
+  font-size: 25px;
+  margin: 15px;
+}
