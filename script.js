@@ -86,7 +86,9 @@ $(() => {
       .then(function (dataUrl) {
           var img = new Image();
           img.src = dataUrl;
-          document.body.appendChild(img);
+          console.log(img);
+          let win = window.open();
+          win.document.write("<img target='_blank' src='"+img.src+"'>");
       })
       .catch(function (error) {
           console.error('oops, something went wrong!', error);
