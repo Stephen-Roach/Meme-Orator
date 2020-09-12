@@ -23,7 +23,6 @@ ul li:before {
   left: 0;
   height: inherit;
   width: inherit;
-  /* background: #d35400; */
   border-radius: 50%;
   transform: scale(0.9);
   z-index: -1;
@@ -42,7 +41,6 @@ ul li:nth-child(3):before {
 ul li:hover:before {
   filter: blur(3px);
   transform: scale(1.2);
-  /* box-shadow: 0 0 15px #d35400; */
 }
 ul li:nth-child(1):hover:before {
   box-shadow: 0 0 15px #4267b2;
@@ -135,6 +133,7 @@ body {
   background-color: black;
   font-size: 20px;
   font-family: Cursive;
+  margin-bottom: 190px;
 }
 
 .fa {
