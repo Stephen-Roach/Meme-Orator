@@ -23,25 +23,25 @@ $(() => {
         memeArray.map((memeItem) => {
         if(memeItem.name.toLowerCase().includes(searchString)) {
             $(".meme-container").append(`
-                        <div class="meme">
-                        <div class="card" style="width: 18rem;">
-                        <a href="#" onclick="selectMeme('${memeItem.url}')"><img id="meme-image" class="card-img-top" src="${memeItem.url}" alt="Card image cap"></a>
-                        </div>
-                        </div>
-                    `);
+                <div class="meme">
+                <div class="card" style="width: 18rem;">
+                <a href="#" onclick="selectMeme('${memeItem.url}')"><img id="meme-image" class="card-img-top" src="${memeItem.url}" alt="Card image cap"></a>
+                </div>
+                </div>
+            `);
         }
         });
     }
 
     function renderGifs(gifArray) {
         gifArray.map((gifItem) => {
-        $(".meme-container").append(`
-                    <div class="meme">
-                    <div class="card" style="width: 18rem;">
-                    <a href="#" onclick="selectMeme('${gifItem.images.original.url}')"><img id="meme-image" class="card-img-top" src="${gifItem.images.original.url}" alt="Card image cap"></a>
-                    </div>
-                    </div>
-                `);
+            $(".meme-container").append(`
+                <div class="meme">
+                <div class="card" style="width: 18rem;">
+                <a href="#" onclick="selectMeme('${gifItem.images.original.url}')"><img id="meme-image" class="card-img-top" src="${gifItem.images.original.url}" alt="Card image cap"></a>
+                </div>
+                </div>
+            `);
         });
     }
     });

@@ -70,12 +70,6 @@ ul li:nth-child(3):hover {
   text-shadow: 0 0 15px #e1306c;
 }
 
-/* ul li:hover{
-    color: #ffa502;
-    box-shadow: 0 0 15px #d35400;
-    text-shadow: 0 0 15px #d35400;
-  } */
-
 .input-group {
   width: 50%;
   margin: auto;
@@ -95,7 +89,7 @@ body {
   border-color: goldenrod;
   border-width: 15px;
   border-style: groove;
-  max-width: 85%;
+  max-width: 65%;
   padding: 50px;
   margin: auto;
   overflow: auto;
@@ -113,12 +107,15 @@ body {
   align-items: center;
 }
 
-
 .text-submit {
   background-color: khaki;
   border-radius: 10px;
   outline: none;
   border: none;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50%;
 }
 
 .download-btn {
@@ -126,6 +123,9 @@ body {
   border-radius: 10px;
   outline: none;
   border: none;
+  margin: auto;
+  margin-top: 10px;
+  width: 50%;
 }
 
 .header {
@@ -193,10 +193,12 @@ body {
 #top-text {
   background-color: lightyellow;
   font-size: 25px;
+  margin: 15px;
 }
 #bottom-text {
   background-color: lightyellow;
   font-size: 25px;
+  margin: 15px;
 }
 .text-submit {
   background-color: linen;
@@ -241,8 +243,8 @@ body {
   left: 0px;
 }
 
-.input-buttons {
-  display: block;
+.form-inputs {
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-end;
