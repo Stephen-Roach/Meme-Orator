@@ -1,5 +1,5 @@
 $(() => {
-    
+
     $("#search-btn").click(function (e) {
         e.preventDefault();
         let searchString = $("#search-size").val();
@@ -84,12 +84,13 @@ $(() => {
     }
 
     function downloadMeme(){
-        html2canvas(document.getElementById("capture"), {
-            onrendered: function(canvas){
-                canvas.className = "canvas";
-                document.getElementById("capture").appendChild(canvas);
-                let img = canvas.toDataURL("image/png");
-                document.getElementById("download").href = img;
-            }
-        });
+      domtoimage.toPng(document.getElementById("capture"))
+      .then(function (dataUrl) {
+          var img = new Image();
+          img.src = dataUrl;
+          document.body.appendChild(img);
+      })
+      .catch(function (error) {
+          console.error('oops, something went wrong!', error);
+      });
     }
