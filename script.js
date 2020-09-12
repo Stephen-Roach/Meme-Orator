@@ -84,7 +84,9 @@ $(() => {
     }
 
     function downloadMeme(){
-        window.html2canvas(document.getElementById("capture")).then(canvas => {
-            document.body.appendChild(canvas)
+        html2canvas(document.getElementById("capture"), {
+            onrendered: function(canvas){
+                
+            }
         });
     }
