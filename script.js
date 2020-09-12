@@ -61,6 +61,12 @@ $(() => {
                     <form class="form-inputs">
                     <input id="top-text" type="text" placeholder="Top Text" />
                     <input id="bottom-text" type="text" placeholder="Bottom Text" />
+                    <select id='colorSelector'>
+                    <option value="white">White</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    </select>
                     <button class="text-submit" onclick="applyText()">Apply</button>
                     <button id="download" class="download-btn" onclick="downloadMeme()">Download Meme</button>
                     </form>
@@ -74,12 +80,14 @@ $(() => {
         let bottomText = $("#bottom-text").val();
         let canvas = document.getElementById("canvas");
         let ctx = canvas.getContext('2d');
-        ctx.fillStyle = "white";
+        ctx.fillStyle =  document.getElementById('colorSelector').value;
+        console.log(ctx.fillStyle)
         ctx.textAlign = "left";
         ctx.font = '30px Impact';
         ctx.fillText(topText, 25, 30);
         ctx.fillText(bottomText, 25, 145);
     }
+
 
     function downloadMeme(){
       domtoimage.toPng(document.getElementById("capture"))
