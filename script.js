@@ -82,14 +82,8 @@ $(() => {
     }
 
     function downloadMeme(){
-        domtoimage.toPng(document.getElementById("capture"))
-            .then(function (dataUrl) {
-                var img = new Image();
-                img.src = dataUrl;
-                let win = window.open();
-                win.document.write("<img src='"+img.src+"'>");
-            })
-            .catch(function (error) {
-                console.error('oops, something went wrong!', error);
+        domtoimage.toBlob(document.getElementById('capture'))
+            .then(function (blob) {
+                saveAs(blob, 'meme.png');
             });
     }
