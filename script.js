@@ -61,7 +61,7 @@ $(() => {
                     <form class="form-inputs">
                     <input id="top-text" type="text" placeholder="Top Text" />
                     <input id="bottom-text" type="text" placeholder="Bottom Text" />
-                    <button class="text-submit" onclick="applyText('${itemURL}')">Apply</button>
+                    <button class="text-submit" onclick="applyText()">Apply</button>
                     <button id="download" class="download-btn" onclick="downloadMeme()">Download Meme</button>
                     </form>
                     </div>
@@ -69,13 +69,11 @@ $(() => {
         `);
     }
 
-    function applyText(imageURL){
+    function applyText(){
         let topText = $("#top-text").val();
         let bottomText = $("#bottom-text").val();
         let canvas = document.getElementById("canvas");
         let ctx = canvas.getContext('2d');
-        let background = new Image();
-        background.src = imageURL;
         ctx.fillStyle = "white";
         ctx.textAlign = "left";
         ctx.font = '30px Impact';
