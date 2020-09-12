@@ -61,9 +61,9 @@ $(() => {
                     <form class="form-inputs">
                     <input id="top-text" type="text" placeholder="Top Text" />
                     <input id="bottom-text" type="text" placeholder="Bottom Text" />
+                    </form>
                     <button class="text-submit" onclick="applyText()">Apply</button>
                     <button id="download" class="download-btn" onclick="downloadMeme()">Download Meme</button>
-                    </form>
                     </div>
             </div>
         `);
@@ -82,14 +82,14 @@ $(() => {
     }
 
     function downloadMeme(){
-      domtoimage.toPng(document.getElementById("capture"))
-      .then(function (dataUrl) {
-          var img = new Image();
-          img.src = dataUrl;
-          let win = window.open();
-          win.document.write("<img src='"+img.src+"'>");
-      })
-      .catch(function (error) {
-          console.error('oops, something went wrong!', error);
-      });
+        domtoimage.toPng(document.getElementById("capture"))
+            .then(function (dataUrl) {
+                var img = new Image();
+                img.src = dataUrl;
+                let win = window.open();
+                win.document.write("<img src='"+img.src+"'>");
+            })
+            .catch(function (error) {
+                console.error('oops, something went wrong!', error);
+            });
     }
